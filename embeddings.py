@@ -8,10 +8,10 @@ class EmbeddingsDictionary:
 
     def load_embeddings(self, max_words, path, normalize):
         '''
-        Load the embeddings contained in path. Returns:
+        Load the embeddings contained in path. Creates:
         * a list of strings 'words' such that words[i] = token
         * a dictionary such that dictionary[token] = i
-        * a float tensor of size n_embeddings * dim, such that tensor[i] = <data>
+        * a float tensor of shape [n_embeddings, dim] such that tensor[i] = <data>
         '''
         logging.info('Loading embeddings')
         with open(path, 'r') as f:
