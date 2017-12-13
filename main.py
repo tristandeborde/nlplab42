@@ -76,4 +76,4 @@ for epoch in range(0, 50):
     logging.info('Starting epoch {}'.format(epoch))
     train_epoch()
     accuracy = test_epoch(epoch)
-    torch.save({'net': model, 'dict': emb_dict, 'test': accuracy}, 'model.pth')
+    torch.save({'net': model, 'dict': emb_dict.dictionary, 'score': accuracy}, 'model.pth')

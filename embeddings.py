@@ -54,10 +54,3 @@ class EmbeddingsDictionary:
         _scores, neighbor_ids = self.emb2neighbors(self.emb[query_id], top_k)
         neighbor_words = [self.words[i] for i in neighbor_ids if i != query_id]
         return neighbor_words
-
-
-def exercise_1():
-    emb_dict = EmbeddingsDictionary(10000)
-    logging.info(emb_dict.w2neighbors('Sugar'))
-    query = emb_dict.embed('Germany') - emb_dict.embed('France') + emb_dict.embed('Paris')
-    logging.info([emb_dict.words[i] for i in emb_dict.emb2neighbors(query)[1]])
