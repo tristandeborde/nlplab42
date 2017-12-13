@@ -3,7 +3,7 @@ import numpy
 import torch
 
 class EmbeddingsDictionary:
-    def __init__(self, max_words=None, path='data/crawl-300d-2M.vec', normalize=True):
+    def __init__(self, max_words=None, path='data/wiki-news-300d-1M.vec', normalize=True):
         self.load_embeddings(max_words, path, normalize)
 
     def load_embeddings(self, max_words, path, normalize):
