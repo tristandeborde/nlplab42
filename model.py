@@ -8,7 +8,7 @@ class BowModel(nn.Module):
     def __init__(self, emb_tensor):
         super(BowModel, self).__init__()
         n_embedding, dim = emb_tensor.size()
-        self.embedding = nn.Embedding(n_embedding, dim, padding_idx=0)
+        self.embedding = nn.Embedding(n_embedding, dim, padding_idx=0, scale_grad_by_freq=True)
         self.embedding.weight = Parameter(emb_tensor, requires_grad=False)
         self.out = nn.Linear(dim, 2)
 
