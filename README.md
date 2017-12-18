@@ -9,6 +9,11 @@ Pre-requisites (you should probably follow [42-AI](https://github.com/42-AI/ai-f
 * Pytorch 0.2+
 * Download and unzip a pre-trained embedding file, preferably the wikipedia EN fasttext embeddings [wiki-news-300d-1M.vec.zip](https://fasttext.cc/docs/en/english-vectors.html).
 
+## Task definition
+
+The dataset is an extract from Stanford Sentiment Treebank. It consists in portions of English sentences about a movie along with a sentiment label. The sentiment label is 0 for sentences that emit a negative opinion about the movie, and 1 for positive reviews. E.g., *a gorgeous , witty , seductive movie* will be labeled 1 and *forced , familiar and thoroughly condescending* is labeled 0.
+
+
 ## Instructions
 
 1. Fork this repo.
